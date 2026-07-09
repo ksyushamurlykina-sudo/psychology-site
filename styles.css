@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@600&display=swap');
+
+:root {
+  --orange: #e25f33;
+  --blue: #a7c2e6;
+  --maroon: #830b0d;
+  --cream: #ede0d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Georgia, serif;
+  color: var(--maroon);
+  background: var(--blue);
+  line-height: 1.35;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.label {
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 28px);
+  margin: 0 0 24px;
+}
+
+.heading {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 900;
+  color: var(--maroon);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: clamp(16px, 1.6vw, 32px);
+  border-radius: 36px;
+  padding: 16px 40px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-blue {
+  background: var(--blue);
+  color: var(--maroon);
+}
+
+.btn-orange {
+  background: var(--orange);
+  color: var(--cream);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: clamp(15px, 1.6vw, 24px);
+  letter-spacing: -0.04em;
+  color: var(--maroon);
+}
+
+.site-header .tagline {
+  text-transform: uppercase;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  background: var(--orange);
+  overflow: hidden;
+  aspect-ratio: 1440 / 1024;
+  min-height: 560px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    aspect-ratio: auto;
+    min-height: 640px;
+  }
+}
+
+.hero-flowers {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  width: 21.4%;
+  aspect-ratio: 308 / 312;
+}
+
+.site-header {
+  position: absolute;
+  top: 5%;
+  left: 8.3%;
+  right: 8.3%;
+  z-index: 2;
+  padding: 0;
+  max-width: none;
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 1;
+  left: 9%;
+  right: 9%;
+  top: 18%;
+  text-align: center;
+}
+
+.hero-content .heading {
+  font-size: clamp(22px, 4.4vw, 64px);
+  white-space: normal;
+}
+
+.hero-content .btn {
+  margin-top: clamp(16px, 3vw, 36px);
+}
+
+/* ---------- About ---------- */
+
+.about {
+  background: var(--blue);
+  padding: 96px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-grid > * {
+  min-width: 0;
+}
+
+.about-text p {
+  font-size: clamp(16px, 1.6vw, 28px);
+  margin: 0 0 20px;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+}
+
+.about-heading {
+  font-size: clamp(28px, 4vw, 54px);
+  margin-top: 64px;
+}
+
+.rep {
+  position: relative;
+  width: clamp(70px, 9vw, 130px);
+  pointer-events: none;
+}
+
+.rep-right {
+  aspect-ratio: 153.96 / 180.32;
+  margin: 24px 0 0 auto;
+}
+
+.rep-left {
+  aspect-ratio: 211.35 / 229.54;
+  margin: 32px 0 0;
+}
+
+.side-project-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.side-project-row p {
+  flex: 1;
+  margin: 0;
+}
+
+.rep-pot {
+  aspect-ratio: 270 / 293;
+  width: clamp(90px, 12vw, 160px);
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    order: -1;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* ---------- Services / certificates ---------- */
+
+.services {
+  background: var(--blue);
+  padding-bottom: 96px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.services-grid > * {
+  min-width: 0;
+}
+
+.services-list {
+  list-style: disc;
+  padding-left: 1.3em;
+  font-size: clamp(16px, 1.6vw, 28px);
+  margin: 0;
+}
+
+.services-list li {
+  margin-bottom: 6px;
+}
+
+.services-intro {
+  font-size: clamp(16px, 1.6vw, 28px);
+  margin: 0 0 16px;
+}
+
+.certificates .label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cert-nav {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.3em;
+  color: var(--maroon);
+  opacity: 0.5;
+}
+
+.cert-frame {
+  border: 1px solid var(--maroon);
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.cert-frame img {
+  display: block;
+  width: 100%;
+}
+
+.cert-caption {
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Facts table ---------- */
+
+.facts {
+  max-width: 1000px;
+  margin: 64px auto 0;
+}
+
+.facts-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 240px) 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--maroon);
+  font-size: clamp(15px, 1.4vw, 32px);
+}
+
+.facts-row:last-child {
+  border-bottom: 1px solid var(--maroon);
+}
+
+.facts-row dt {
+  font-weight: bold;
+  margin: 0;
+}
+
+.facts-row dd {
+  margin: 0;
+}
+
+/* ---------- Price banner ---------- */
+
+.price {
+  background: var(--orange);
+  color: var(--cream);
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.price .label {
+  color: var(--cream);
+}
+
+.price-amount {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4.5vw, 54px);
+  margin: 0 0 8px;
+}
+
+.price-note {
+  font-size: clamp(16px, 1.6vw, 32px);
+  margin: 0;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+  background: var(--blue);
+  padding: 96px 0;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: clamp(28px, 4vw, 54px);
+}
+
+.contact-sub {
+  max-width: 800px;
+  margin: 20px auto 32px;
+  font-size: clamp(16px, 1.6vw, 32px);
+}
+
+.side-project {
+  max-width: 1100px;
+  margin: 80px 0 0;
+  text-align: left;
+}
+
+.side-project p {
+  font-size: clamp(16px, 1.4vw, 32px);
+}
+
+.side-project > .side-project-row {
+  margin: 0 0 32px;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--orange);
+  color: #fff;
+  text-align: center;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: clamp(16px, 1.8vw, 32px);
+  padding: 40px 24px;
+}
