@@ -389,11 +389,53 @@ img {
 /* ---------- Footer ---------- */
 
 .footer {
+  position: relative;
   background: var(--orange);
-  color: #fff;
-  text-align: center;
-  font-family: 'Unbounded', sans-serif;
-  font-weight: 700;
-  font-size: clamp(16px, 1.8vw, 32px);
   padding: 40px 24px;
+  overflow: visible;
+  min-height: 120px;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-icon {
+  display: block;
+  width: clamp(40px, 4.5vw, 64px);
+  aspect-ratio: 1 / 1;
+}
+
+.footer-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ig-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-flowers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-flower {
+  position: absolute;
+  width: clamp(70px, 9vw, 130px);
+  aspect-ratio: 184 / 186;
+  top: 50%;
+  transform: translateY(-50%);
 }
